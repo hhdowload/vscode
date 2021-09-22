@@ -1,0 +1,11 @@
+---
+hosts: node4
+remote_user: root
+vars: tmp
+templates: config.j2
+tasks: 
+  - name: tmp
+  - name: tmp2
+handlers: 
+  - name:
+...
