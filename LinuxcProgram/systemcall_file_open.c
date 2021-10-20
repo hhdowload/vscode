@@ -6,7 +6,7 @@
 
 int main ()
 {
-  char c;
+  char *c;
   int in, out;
 
   in = open("file.in", O_RDONLY);
@@ -15,7 +15,7 @@ int main ()
 
   printf("please input somedata");
   
-  nread = read(in, &c ,1);
+  nread = read(in, c ,sizeof(c));
   if (nread  == -1 )   
     write(2,"A read error has occured \n",12 );
   
