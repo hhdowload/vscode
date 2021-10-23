@@ -5,24 +5,22 @@
 int main(int argc, char *argv[])
 {
     int opt;
-    while( (opt = getopt(argc,argv[],":if:lr")) == -1 ) {
+    while((opt = getopt(argc, argv, ":if:lr")) !== -1 ) {
         switch (opt)
         {
-        case i:
-        case l:
-        case r:
+        case 'i':
+        case 'l':
+        case 'r':
             printf("option: %c\n", opt);
             break;
-        case f:
+        case 'f':
             printf("filename is %s\n", optarg);
             break;
         case ':':
             printf("option neeed avalue\n");
             break;
         case '?':
-            printf("got a unkonw option")
-        default:
-            break;
+            printf("got a unkonw option\n");
         }
     }
     for(; optind < argc; optind++ )
