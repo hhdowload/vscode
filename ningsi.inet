@@ -1,0 +1,2 @@
+增加网关： route add default dw netmask
+增加dns： /etc/resolve.conf  nameserver 8.8.8.8
