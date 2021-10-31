@@ -1,0 +1,33 @@
+###mysql命令行
+mysqladmin variables;
+grant all privileges on *.* to rick@localhost identified by 'passwd';
+mysqld --verbose --help;
+mysql -uroot -padmin_1234 foo <sqlcommand.sql
+mysql:
+    help exit quit go source status system tee use
+mysqladmin:
+    create drop password status variables
+mysqldump:
+    mysqldump -uroot -ppassword databases > mysql.dump
+mysqlimport:
+
+mysqlshow:
+
+grant revoke 
+
+create table name ( column type [null | not null ] [auto_increment] [primary key])
+
+
+链接立程：
+#include <mysql.h>
+MYSQL *mysql_init(MYSQL *);
+MYSQL *mysql_real_connect(MYSQL *connection,
+        const char *server_host,
+        const char *sql_user_name,
+        const char *sql_password
+        const char *db_name,
+        unsigned int port_number,
+        const char *unis_socket_name,
+        unsigned int flages);
+        
+void mysql_close(MYSQL *connection);
